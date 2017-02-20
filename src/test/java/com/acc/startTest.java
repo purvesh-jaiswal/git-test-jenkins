@@ -29,7 +29,7 @@ public class startTest {
 	@Test
 	public void StartTest(){
 		
-		driver.navigate().to("https://www.facebook.com/");
+		driver.navigate().to("http://35.154.29.121/test.com/");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//*[@id='signup']/form/div[1]/div[1]/input")).sendKeys("purvesh");
 		driver.findElement(By.xpath("//*[@id='signup']/form/div[1]/div[2]/input")).sendKeys("jaiswal");
