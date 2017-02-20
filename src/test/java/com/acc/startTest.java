@@ -3,6 +3,7 @@ package com.acc;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -22,6 +23,11 @@ public class startTest {
 	@AfterTest
 	public void trminate(){
 		
+		driver.navigate().back();	
+		
+		String url=	driver.getCurrentUrl();
+		Assert.assertTrue(url.equals(driver));
+		
 		driver.quit();
 		
 	}
@@ -38,4 +44,6 @@ public class startTest {
 		driver.findElement(By.xpath("//*[@id='signup']/form/button")).click();
 	
 	}
+	
+	
 }
