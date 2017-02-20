@@ -1,5 +1,6 @@
 package com.acc;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -20,7 +21,7 @@ public class startTest {
 	
 	@AfterTest
 	public void trminate(){
-		driver.manage().window().maximize();
+		
 		driver.quit();
 		
 	}
@@ -28,7 +29,13 @@ public class startTest {
 	@Test
 	public void StartTest(){
 		
-		driver.navigate().to("https://www.youtube.com/");
-		
+		driver.navigate().to("https://www.facebook.com/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//*[@id='signup']/form/div[1]/div[1]/input")).sendKeys("purvesh");
+		driver.findElement(By.xpath("//*[@id='signup']/form/div[1]/div[2]/input")).sendKeys("jaiswal");
+		driver.findElement(By.xpath("//*[@id='signup']/form/div[2]/input")).sendKeys("jaiswal@india.com");
+		driver.findElement(By.xpath("//*[@id='signup']/form/div[3]/input")).sendKeys("jaiswal");
+		driver.findElement(By.xpath("//*[@id='signup']/form/button")).click();
+	
 	}
 }
