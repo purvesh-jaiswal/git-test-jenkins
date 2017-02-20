@@ -23,10 +23,10 @@ public class startTest {
 	@AfterTest
 	public void trminate(){
 		
-		driver.navigate().back();	
+		/*driver.navigate().back();	
 		
 		String url=	driver.getCurrentUrl();
-		Assert.assertTrue(url.equals(driver));
+		Assert.assertTrue(url.equals(driver));*/
 		
 		driver.quit();
 		
